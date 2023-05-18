@@ -88,8 +88,8 @@ const value = useCounterStore(state => state.value)
           <input hidden value={pay} name='pay'></input>
           <input hidden value={card} name='card'></input>
           <Button type="submit" color={"primary"} bordered flat auto>He realizado el pago</Button>
-          <input type="hidden" name="_next" value='startupcoin.vercel.app'></input>
-                  <input type="hidden" name="_captcha" value='false'></input>
+          <input type="hidden" name="_next" value='http://startupcoin.vercel.app'></input>
+          <input type="hidden" name="_captcha" value='false'></input>
         </form>
         </Modal.Footer>
       </Modal>
