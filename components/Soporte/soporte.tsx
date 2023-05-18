@@ -76,7 +76,7 @@ export const Contact = () => {
                       Enviar
                     </button>
                   </div>
-                  <input type="hidden" name="_next" value='http://localhost:3000'></input>
+                  <input type="hidden" name="_next" value='http://startupcoin.vercel.app/contact'></input>
                   <input type="hidden" name="_captcha" value='false'></input>
                 </div>
               </form>
