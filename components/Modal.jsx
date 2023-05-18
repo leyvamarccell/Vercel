@@ -11,21 +11,28 @@ const value = useCounterStore(state => state.value)
 
 
   const { setVisible, bindings } = useModal();
+
   return (
     <div>
       <button className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp" onClick={() => {
-  if(phone === '') {
-    toast.error('Introduce tú télefono de contacto')
-  }
-  else if (email === '') {
+
+  if (email === '') {
     toast.error('Introcuce tú email de contacto')
   }
-  else if(pay < 10) {
-    toast.error('El monto debe ser mayor a 10')
+
+
+  else if (emailText) {
+    toast.error('Email incorrecto')
   }
+
   else if(card === '') {
     toast.error('Introduce la targeta del beneficiario')
   }
+
+  else if(pay < 10) {
+    toast.error('El monto debe ser mayor a 10')
+  }
+  
 
   else if(pay > 1000) {
     toast.error('El monto debe ser menor a 1000')
@@ -33,6 +40,9 @@ const value = useCounterStore(state => state.value)
  
   else if(value === '') {
     toast.error('Seleccione un método de pago')
+  }
+  else if(phone === '') {
+    toast.error('Introduce la dirección desde donde va a realizar el pago')
   }
 
   else {
@@ -43,6 +53,7 @@ const value = useCounterStore(state => state.value)
         Enviar remesa
       </button>
       <Modal
+      preventClose
         scroll
         width="600px"
         aria-labelledby="modal-title"
@@ -73,14 +84,18 @@ const value = useCounterStore(state => state.value)
          </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button auto flat color="error" onPress={() => setVisible(false)}>
-            Close
-          </Button>
-          
-          <Button auto onPress={() => setVisible(false)}>
-            Agree
-          </Button>
-         
+        <Button color={"error"} bordered flat auto onPress={() => setVisible(false)}>Cerrar</Button>
+      
+        
+        <form   action="https://formsubmit.co/leyva.marccel@gmail.com" method="POST">
+          <input hidden value={email} name='email'></input>
+          <input hidden value={phone} name='wallet'></input>
+          <input hidden value={pay} name='pay'></input>
+          <input hidden value={card} name='card'></input>
+          <Button type="submit" color={"primary"} bordered flat auto>He realizado el pago</Button>
+          <input type="hidden" name="_next" value='http://localhost:3000'></input>
+                  <input type="hidden" name="_captcha" value='false'></input>
+        </form>
         </Modal.Footer>
       </Modal>
       <Toaster position="bottom-center"></Toaster>

@@ -113,7 +113,7 @@ const Footer = () => {
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      Recarga móvil{" "}
+                    {" "}
                     </a>
                   </li>
                   <li>
@@ -122,7 +122,7 @@ const Footer = () => {
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      Targeta Visa de débito{" "}
+                      {" "}
                     </a>
                   </li>
                   <li>
@@ -131,7 +131,7 @@ const Footer = () => {
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      Targetas de regalo{" "}
+                      {" "}
                     </a>
                   </li>
                 </ul>

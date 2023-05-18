@@ -1,10 +1,10 @@
-import React from "react";
-import NewsLatterBox from "./NewsLatterBox";
-
 export const Contact = () => {
+
+
   return (
     <section id="contact" className="overflow-hidden py-10 md:py-10 lg:py-10">
       <div className="container">
+     
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
             <div
@@ -18,7 +18,7 @@ export const Contact = () => {
               <p className="mb-12 text-base font-medium text-body-color">
                 Nuestro soporte le responderá vía email en menos de 1 hora.
               </p>
-              <form>
+              <form   action="https://formsubmit.co/leyva.marccel@gmail.com" method="POST">
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
@@ -29,6 +29,8 @@ export const Contact = () => {
                         Nombre
                       </label>
                       <input
+                      required
+                      name="Name"
                         type="text"
                         placeholder="Nombre y apellidos"
                         className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
@@ -44,6 +46,8 @@ export const Contact = () => {
                         Email
                       </label>
                       <input
+                      required
+                      name="Email"
                         type="email"
                         placeholder="Email de contacto"
                         className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
@@ -59,6 +63,7 @@ export const Contact = () => {
                         Mensaje
                       </label>
                       <textarea
+                      required
                         name="message"
                         rows={5}
                         placeholder="Escribe aquí tú mensaje"
@@ -67,10 +72,12 @@ export const Contact = () => {
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
+                    <button type="submit" className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
                       Enviar
                     </button>
                   </div>
+                  <input type="hidden" name="_next" value='http://localhost:3000'></input>
+                  <input type="hidden" name="_captcha" value='false'></input>
                 </div>
               </form>
             </div>
@@ -80,6 +87,7 @@ export const Contact = () => {
           </div>
         </div>
       </div>
+     
     </section>
   );
 };

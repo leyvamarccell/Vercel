@@ -6,7 +6,7 @@ const testimonialData: Testimonial[] = [
   {
     id: 1,
     name: "Yamilet Rodriguez",
-    designation: "Founder @TailGrids",
+    designation: "",
     content:
       "Envié 100 USD a mi familia en Cuba y llegó sin contratiempos, tienen una buena variedad de cryptoactivos para hacer las remesas, aún les faltan más por incluir. Tienen un buen servicio de atención al cliente y todo es muy sencillo. Tengo que mencionar que también están adicionando opciones nuevas, Gracias!.",
     image: "https://www.svgrepo.com/show/446489/avatar.svg",
@@ -15,7 +15,7 @@ const testimonialData: Testimonial[] = [
   {
     id: 2,
     name: "Raúl Rodríguez",
-    designation: "Founder @UIdeck",
+    designation: "",
     content:
       "Fenomenal Servicio, exelente soporte, mejor dicho lo mejor de lo mejor, se la recomiendo 100% a todos, todo desde la comodidad del hogar. La mejor plataforma para enviar remesas a Cuba.",
     image: "https://www.svgrepo.com/show/446481/avatar-portrait.svg",
@@ -24,7 +24,7 @@ const testimonialData: Testimonial[] = [
   {
     id: 3,
     name: "Oscar Ortega",
-    designation: "Founder @Lineicons",
+    designation: "",
     content:
       "Lo mejor de esta plataforma, es su transparencia, su calidad, y el personal de soporte detras de su funcionamiento.",
     image: "https://www.svgrepo.com/show/446486/avatar.svg",

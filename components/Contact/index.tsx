@@ -1,8 +1,6 @@
 'use client'
 
 import Coin from "../Coin";
-import Features from "../Features";
-import NewsLatterBox from "../Soporte/NewsLatterBox";
 import { useState } from "react";
 import Modal from '../Modal'
 import {useCounterStore} from '../store/counterStore'
@@ -33,17 +31,7 @@ const Contact = () => {
               </h2>
          
                 <div className="-mx-4 flex flex-wrap">
-                  <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
-                   
-                      <input
-                        onChange={(e) => setPhone(e.target.value)}
-                        type="text"
-                        placeholder="Télefono de contacto"
-                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
-                      />
-                    </div>
-                  </div>
+                  
 
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
@@ -104,6 +92,17 @@ const Contact = () => {
                   </div>
 
 
+                  <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                   
+                      <input
+                        onChange={(e) => setPhone(e.target.value)}
+                        type="text"
+                        placeholder={`Dirección de ${names}`}
+                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                      />
+                    </div>
+                  </div>
 
 
 
@@ -114,8 +113,11 @@ const Contact = () => {
                       >
                         Método de pago : {names}
                       </label>
-                    <div className="mb-8">
+                      <div className="mb-8">
                    
+              
+
+
                     <div className="grid grid-cols-3 mt-8 ml-4 md:grid-cols-6 md:ml-10 ">
                       <Coin name='Zelle' text='' image='https://qvapay.com/img/coins/zelle.svg'/>
                       <Coin name='Bitcoin' text='bc1qtfgly3f5mwt3qx23zekln2eln4g980sh8da5sv' image='https://www.svgrepo.com/show/428655/bitcoin-btc-cryptocurrency.svg'/>
@@ -134,6 +136,12 @@ const Contact = () => {
                     </div>
                    
                   </div>
+
+
+                
+
+
+
                   <div className="w-full px-4">
                    
                    <Modal phone={phone} email={email} pay={pay} card={card}/>
