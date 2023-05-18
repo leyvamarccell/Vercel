@@ -20,11 +20,6 @@ const value = useCounterStore(state => state.value)
     toast.error('Introcuce tú email de contacto')
   }
 
-
-  else if (emailText) {
-    toast.error('Email incorrecto')
-  }
-
   else if(card === '') {
     toast.error('Introduce la targeta del beneficiario')
   }
